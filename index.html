@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discord Webhook</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Discord Webhook Deleter/Messager</h1>
+        
+        <div class="row">
+            <div class="col">
+                <h2>Send Message</h2>
+                <form method="post" action="/send-message">
+                    <div class="form-group">
+                        <label for="webhookUrl">Webhook URL:</label>
+                        <input type="text" class="form-control" id="webhookUrl" name="webhookUrl" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <input type="text" class="form-control" id="message" name="message" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="col">
+                <h2>Delete Webhook</h2>
+                <form method="post" action="/delete-webhook">
+                    <div class="form-group">
+                        <label for="webhookUrlDelete">Webhook URL:</label>
+                        <input type="text" class="form-control" id="webhookUrlDelete" name="webhookUrlDelete" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Delete Webhook</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
